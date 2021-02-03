@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <div>123123</div>
+    <div><i class="fa fa-address-book-o" aria-hidden="true"></i></div>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
