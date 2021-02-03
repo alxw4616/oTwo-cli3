@@ -21,6 +21,9 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "less": "^3.0.4",
-    "less-loader": "^5.0.0"
+    "less-loader": "^5.0.0",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^5.0.0",
+    "postcss-px-to-viewport": "^1.1.1"
   }
 }
