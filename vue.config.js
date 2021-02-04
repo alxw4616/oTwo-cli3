@@ -8,6 +8,9 @@ function resolve(dir) {
 const name = '中油农垦'
 
 module.exports = {
+	devServer:{
+		openPage:'/reserve.html'
+	},
 	publicPath:'./',
 	assetsDir:'assetsdir',
 	pages: {
@@ -24,12 +27,12 @@ module.exports = {
 			title: '中油农垦',
 			// 在这个页面中包含的块，默认情况下会包含
 			// 提取出来的通用 chunk 和 vendor chunk。
-			// todo 添加下面参数后.页面白屏,原因还没有找到
+			// 添加下面参数后.页面白屏,原因还没有找到,
 			// chunks: ['chunk-vendors', 'chunk-common']
+			// 更改 chunks 打包成功
+			chunks: ['chunk-vendors', 'chunk-common', 'reserve', `manifest.reserve`]
 		},
 	},
-
-
 	configureWebpack: {
 		// provide the app's title in webpack's name field, so that
 		// it can be accessed in index.html to inject the correct title.
