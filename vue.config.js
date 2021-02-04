@@ -1,11 +1,17 @@
 'use strict'
 const path = require('path')
+const fs=require("fs");
 
 function resolve(dir) {
 	return path.join(__dirname, dir)
 }
 
 const name = '中油农垦'
+
+// 闪屏
+// 如果 pages 中 增加 launchImage 则页面加载时增加闪屏
+// D:\oTwo-cli3\src\router\permission.js 中 移除
+var launchImage = fs.readFileSync("./public/launch.html","utf-8");
 
 module.exports = {
 	devServer:{
@@ -25,6 +31,8 @@ module.exports = {
 			// 当使用 title 选项时，
 			// template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
 			title: '中油农垦',
+
+			launchImage:launchImage,
 			// 在这个页面中包含的块，默认情况下会包含
 			// 提取出来的通用 chunk 和 vendor chunk。
 			// 添加下面参数后.页面白屏,原因还没有找到,

@@ -13,6 +13,11 @@ NProgress.configure({
 const whiteList = ['/login', '/auth-redirect']
 
 router.beforeEach(async (to, from, next) => {
+	try{
+		// 移动闪屏
+		document.getElementById('launch-image').remove()
+	}catch(error) {}
+
 	NProgress.start()
 
 	// set page title
